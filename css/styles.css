@@ -921,58 +921,53 @@ margin-bottom: 12px;
  .modal-form-area {
   margin-bottom: 20px;
  }
- .chek-title {
+
+ .label-chek {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--text-color);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+    }
 
- }
 .chek-link {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--accent-color);
-  }
+    }
 
  .modal-chekbox {
   margin-bottom: 30px;
  }
-
- .chek-title {
-  /* display: flex; */
-  
- }
-
+.chek-title {
+  margin-right: 8px;
+}
 .chekbox-icon-chek {
   width: 16px;
   height: 15px;
   border-radius: 2px;
   border: 1px solid var(--had-logo-color);
   margin-right: 8px;
-  
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-
-}
-
-
-/* .chek-title, 
-.label-chek {
-  display: flex;
-  align-items: center;
-}
-
- .chekbox-icon-chek {
-  width: 16px;
-  height: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
  }
-  */
+
+.icon-modal-check {
+  fill: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+.chekbox-input:checked + .label-chek .chekbox-icon-chek {
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.chekbox-input:checked + .label-chek .icon-modal-check {
+  fill: var(--hero-color);}
